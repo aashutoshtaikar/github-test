@@ -1,2 +1,2 @@
-# github-test
+# nothing-app
 Test repo for github

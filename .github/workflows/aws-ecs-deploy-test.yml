@@ -53,7 +53,9 @@ jobs:
         ls Dockerfile
         ls -latr
         pwd
+        cp Dockerfile ${{ runner.workspace }}/target/
         cd ${{ runner.workspace }}/target
+        ls -latr
         docker build --no-cache -t nothing-app-docker-image .
         docker tag nothing-app-docker-image:latest 639235717884.dkr.ecr.us-east-1.amazonaws.com/nothing-app-docker-image:latest
         docker push 639235717884.dkr.ecr.us-east-1.amazonaws.com/nothing-app-docker-image:latest

@@ -37,6 +37,9 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
+        ls Dockerfile
+        ls -latr
+        pwd
         docker build -t nothing-app-docker-image .
         docker tag nothing-app-docker-image:latest 639235717884.dkr.ecr.us-east-1.amazonaws.com/nothing-app-docker-image:latest
         docker push 639235717884.dkr.ecr.us-east-1.amazonaws.com/nothing-app-docker-image:latest
